@@ -5,6 +5,8 @@ namespace Senai.Gufi.WebApi.Manha.Domains
 {
     public partial class Evento
     {
+        internal static Evento eventoBuscado;
+
         public Evento()
         {
             Presenca = new HashSet<Presenca>();
