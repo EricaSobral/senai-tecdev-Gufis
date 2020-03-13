@@ -31,13 +31,13 @@ namespace Senai.Gufi.WebApi.Manha.Controllers
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            return Ok(_tipoEventoRepository.BuscarPorId(id));
+            return Ok(_tipoEventoRepository.BuscarTipoEventoPorId(id));
         }
 
         [HttpPost]
         public IActionResult Post(TipoEvento novoTipoEvento)
         {
-            _tipoEventoRepository.Cadastrar(novoTipoEvento);
+            _tipoEventoRepository.CadastrarTipoEvento(novoTipoEvento);
 
             return StatusCode(201);
         }
@@ -47,7 +47,7 @@ namespace Senai.Gufi.WebApi.Manha.Controllers
         {
             try
             {
-                _tipoEventoRepository.Atualizar(id, tipoEventoAtualizado);
+                _tipoEventoRepository.AtualizarTipoEvento(id, tipoEventoAtualizado);
 
                 return StatusCode(204);
             }
@@ -60,7 +60,7 @@ namespace Senai.Gufi.WebApi.Manha.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            _tipoEventoRepository.Deletar(id);
+            _tipoEventoRepository.DeletarTipoEvento(id);
 
             return StatusCode(204);
         }

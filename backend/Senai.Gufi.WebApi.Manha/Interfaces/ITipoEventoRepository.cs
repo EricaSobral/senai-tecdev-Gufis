@@ -10,12 +10,12 @@ namespace Senai.Gufi.WebApi.Manha.Interfaces
     {
         List<TipoEvento> Listar();
 
-        void Cadastrar(TipoEvento novoTipoEvento);
+        void CadastrarTipoEvento(TipoEvento novoTipoEvento);
 
-        void Atualizar(int id, TipoEvento tipoEventoAtualizado);
+        void AtualizarTipoEvento(int id, TipoEvento tipoEventoAtualizado);
 
-        void Deletar(int id);
+        void DeletarTipoEvento(int id);
 
-        TipoEvento BuscarPorId(int id);
+        TipoEvento BuscarTipoEventoPorId(int id);
     }
 }

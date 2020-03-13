@@ -29,7 +29,7 @@ namespace Senai.Gufi.WebApi.Manha.Domains
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data source=DESKTOP-GCOFA7F\\SQLEXPRESS; Initial Catalog=Gufi_Manha; user Id=sa; pwd=sa@132;");
+                optionsBuilder.UseSqlServer("Data source=DEV14\\SQLEXPRESS; Initial Catalog=Gufi; user Id=sa; pwd=sa@132;");
             }
         }
 

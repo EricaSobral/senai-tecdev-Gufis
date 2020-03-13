@@ -11,7 +11,7 @@ namespace Senai.Gufi.WebApi.Manha.Repositories
     {
         GufiContext ctx = new GufiContext();
 
-        public void Atualizar(int id, TipoEvento tipoEventoAtualizado)
+        public void AtualizarTipoEvento(int id, TipoEvento tipoEventoAtualizado)
         {
             TipoEvento tipoEventoBuscado = ctx.TipoEvento.Find(id);
 
@@ -22,21 +22,21 @@ namespace Senai.Gufi.WebApi.Manha.Repositories
             ctx.SaveChanges();
         }
 
-        public TipoEvento BuscarPorId(int id)
+        public TipoEvento BuscarTipoEventoPorId(int id)
         {
             return ctx.TipoEvento.FirstOrDefault(te => te.IdTipoEvento == id);
         }
 
-        public void Cadastrar(TipoEvento novoTipoEvento)
+        public void CadastrarTipoEvento(TipoEvento novoTipoEvento)
         {
             ctx.TipoEvento.Add(novoTipoEvento);
 
             ctx.SaveChanges();
         }
 
-        public void Deletar(int id)
+        public void DeletarTipoEvento(int id)
         {
-            ctx.TipoEvento.Remove(BuscarPorId(id));
+            ctx.TipoEvento.Remove(BuscarTipoEventoPorId(id));
 
             ctx.SaveChanges();
         }
